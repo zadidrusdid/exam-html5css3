@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<style>
+*{margin:0;font-size:12px;}
+body {width:500px;padding:10px}
+article {border: medium inset;}
+h4 {color:#999999; text-transform:uppercase;}
+li{font-weight:bold;margin-bottom:5px}
+time{color:red; font-weight:normal}
+</style>
+</head>
+<body>
+<article>
+  <h4>More News</h4>
+  <ul>
+     <li>Foo Bar Foo Bar Foo Bar Foo Bar Foo Bar Foo Bar Foo Bar Foo Bar Foo Bar Foo Bar Foo Bar Foo Bar Foo Bar Foo Bar Foo Bar Foo Bar <time> 8:20 PM GMT</time></li>
+     <li>Foo Bar Foo Bar Foo Bar Foo Bar Foo Bar Foo Bar Foo Bar Foo Bar Foo Bar Foo Bar Foo Bar <time>8 20 PM GMT</time></li>
+     <li>Foo Bar Foo Bar Foo Bar Foo Bar Foo Bar Foo Bar Foo Bar Foo Bar Foo Bar Foo Bar Foo Bar </li>
+     <li>Foo Bar Foo Bar Foo Bar Foo Bar Foo Bar Foo Bar Foo Bar Foo Bar Foo Bar Foo Bar Foo Bar Foo Bar Foo Bar Foo Bar Foo Bar</li>
+  </ul>
+</article>
+</body>
+</html> 

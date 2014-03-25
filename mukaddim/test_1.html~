@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<style>
+*{margin:0;font-size:12px;}
+body {width:500px;padding:10px}
+article {float:left;width:300px}
+aside {float:right;width:200px}
+span:first-child {color:#999999; text-transform:uppercase;}
+h4+span {color:#cccccc;font-weight: bold;}
+span:last-child {color:blue;}
+</style>
+</head>
+<body>
+<article>
+  <span>From the Magazine</span>
+  <h4>The Cold, Hard Lesson of Mobile</h4>
+  <span>by Foo Bar</span>
+  <p>
+     The Epcot Center is a theme park in Disney World, Florida. 
+     The Epcot Center is a theme park in Disney World, Florida. 
+     The Epcot Center is a theme park in Disney World, Florida.
+  </p>
+  <span>94 comments</span>
+</article>
+<aside>
+  <img src="img/1.jpeg" alt="image"/>
+</aside>
+</body>
+</html> 
