@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>HTML5 and CSS3 first example with tag selector</title>
+    <style type="text/css">
+        section > section > p{float: left;width:60%;}
+        section > section > img{float: left; width:35%;width:200px;height:200px;}
+        section > hgroup > h5, section > section > address {color: #808080;}
+        section > section > div{clear:both;}
+        section > section > div img{}
+        section > section > div a, section > section > div a:active, section > section > div a:link, section > section > div a:visited{font-size: 12px;color: darkolivegreen;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section id="sample-news-listing">
+            <hgroup>
+                <h5>FROM THE MAGAZINE</h5>
+                <h1>News title goes here</h1>
+            </hgroup>
+            <section class="list">
+                <address class="author">By GARY RIVLIN</address>
+                <p>
+                    News Content goes here.News Content goes here.News Content goes here.News Content goes here.News Content goes here.News Content goes here.News Content goes here.News Content goes here.News Content goes here.
+                    News Content goes here.News Content goes here.News Content goes here.News Content goes here.News Content goes here.News Content goes here.News Content goes here.News Content goes here.News Content goes here.
+                    News Content goes here.News Content goes here.News Content goes here.News Content goes here.News Content goes here.News Content goes here.News Content goes here.News Content goes here.News Content goes here.
+                </p>
+                <img src="img/img_the_scream.jpg" alt="The Scream" title="The Scream" />
+                <div class="comments">
+                    <img src="img/comments_icon.png"><a href="#" title="comments">94 comments</a>
+                </div>
+            </section>
+        </section>
+    </div>
+</body>
+</html>
