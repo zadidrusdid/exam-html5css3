@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 1</title>
+    <style>
+        table td{
+            border: 1px solid #808080;
+        }
+    </style>
+
+    <script>
+
+        function drawTable(row, column){
+            var table = document.createElement('table')
+
+            for(i = 1; i <= row; i++){
+                var tr = document.createElement('tr');
+                for(j = 1; j <= column; j++){
+                    var td = document.createElement('td')
+                    var cellText = document.createTextNode(' row: '+ i + '\n' + ' column: ' + j);
+                    td.appendChild(cellText);
+                    tr.appendChild(td);
+                }
+
+                table.appendChild(tr);
+            }
+            //console.log(table);
+            document.getElementById('table-container').appendChild(table);
+        }
+
+        // calling drawTable Function
+
+
+
+        function draw(){
+            var row = document.getElementById('row').value;
+            var column = document.getElementById('column').value;
+           // alert(row);
+            drawTable(row, column);
+        }
+    </script>
+</head>
+
+
+<body>
+
+<input type="text" name="row" id="row" placeholder="Number of row" />
+<input type="text" name="row" id="column" placeholder="Number of column" />
+<button onclick="draw();" >Draw table</button>
+
+<div id="table-container" style="border: 1px solid gray">
+
+</div>
+</body>
+</html>
