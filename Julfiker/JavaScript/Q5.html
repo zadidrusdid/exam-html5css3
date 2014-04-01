@@ -75,10 +75,9 @@ and open the template in the editor.
             input.type = "button";        
             input.value = "Close";
             input.id = "close";
-            myWindow.document.body.appendChild(input);
-            
             input.addEventListener("click", closePopup, false);
- 
+            myWindow.document.body.appendChild(input);
+           
         }
         
         function closePopup(){
