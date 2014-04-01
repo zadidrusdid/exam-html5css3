@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>task 3</title>
+
+</head>
+
+<body>
+
+<script>
+
+    var control = true;
+    while (control) {
+
+        var person = prompt("Please enter your name", "Default name");
+        if (person) {
+            var confirmation = window.confirm("confirmation: are you sure you are  " + person);
+            if (confirmation == true) {
+                alert("alert, he is " + person)
+                document.write(person);
+                console.log(person);
+                control = false;
+            }
+        }
+    }
+
+</script>
+</body>
+</html>
