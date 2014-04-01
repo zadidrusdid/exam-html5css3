@@ -4,7 +4,8 @@ function grabLinksOfCurrentPage() {
     var ulTag = document.createElement('ul');
     for(var anchorIndex = 0; anchorIndex<anchorTags.length; anchorIndex++) {
         var liTag = document.createElement('li');
-        liTag.appendChild(anchorTags[anchorIndex]);
+	var texts = document.createTextNode(anchorTags[anchorIndex].getAttribute('href'));
+        liTag.appendChild(texts);
         ulTag.appendChild(liTag);
     }
     var bodyTag = document.getElementsByTagName('body')[0];
