@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Javascript test 04</title>
+    <style type="text/css">
+        .buttonset {
+            position:fixed;
+            top:50%;
+            left: 10px;
+            background-color: #002a80;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+<form>
+    <input type="checkbox" name="product[]" value="A" class="checkbox" />A
+    <input type="checkbox" name="product[]" value="B" class="checkbox" />B
+    <input type="checkbox" name="product[]" value="C" class="checkbox" />C
+    <input type="checkbox" name="product[]" value="D" class="checkbox" />D
+    <input type="checkbox" name="product[]" value="E" class="checkbox" />E
+    <button type="button" class="button" name="checkAll" id="checkAll">Check All</button>
+    <button type="button" class="button" name="uncheckAll" id="uncheckAll">Un-Check All</button>
+</form>
+<script type="text/javascript" src="javascript/js07.js"></script>
+<script>
+    window.load = checkBox();
+</script>
+</body>
+</html>
