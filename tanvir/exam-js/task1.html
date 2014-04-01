@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>task 1 - solution 2</title>
+    <style>
+        table tr{
+            border: 1px;
+        }
+    </style>
+</head>
+
+<body>
+<input placeholder="rows" id="rows">
+<input placeholder="columns" id="columns">
+
+<input type="button" value="Draw table" onclick="drawTable(document.getElementById('rows').value,document.getElementById('columns').value)">
+<!--<input type="button" value="Draw table" onclick="drawTable(2,3)">-->
+<script>
+
+    function drawTable(row, column){
+
+        var table = document.createElement('table');
+        for (var i = 0; i < row; i++){
+            var tr = document.createElement('tr');
+            for (var j = 0; j < column; j++){
+                var td = document.createElement('td');
+                var text = document.createTextNode(' column '+(j+1));
+                td.appendChild(text);
+                tr.appendChild(td);
+            }
+            table.appendChild(tr);
+        }
+        console.log(table)
+        document.body.appendChild(table);
+
+    }
+
+</script>
+</body>
+
+</html>
+
