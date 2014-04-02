@@ -13,6 +13,7 @@
 </fieldset>
 <script>
     var allElements = document.body.getElementsByTagName("*");
+    console.log(allElements.length);
     for (var i = 0; i< allElements.length; i++){
         allElements[i].addEventListener("click", showElementType, true);
     }
