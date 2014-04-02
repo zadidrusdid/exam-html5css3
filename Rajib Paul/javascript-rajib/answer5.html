@@ -1,0 +1,55 @@
+<html>
+<head>
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+<div id="myDiv">
+    <form id="myForm">
+        Name : <input type="text" name="name" />
+        Yes? : <input type="checkbox" value="1"/>
+        Age :   <select>
+                    <option value="-1">Select age</option>
+                    <option value="10">10</option>
+                    <option value="20">20</option>
+                </select>
+        <input type="button" value="Submit" id="frm_submit">
+
+    </form>
+</div>
+<script>
+    (function(){
+            var mywindow;
+            var myForm = document.getElementById("myForm");
+            var btnClick = document.getElementById("frm_submit");
+
+            numOfElements = myForm.elements.length;
+            console.log(myForm.elements)
+            btnClick.addEventListener('click' , function(){
+                popupText = "Name : " + myForm.elements[0].value + "\n";
+                popupText += "Yes? :" + myForm.elements[1].value + "\n";
+                popupText += "Age :" + myForm.elements[2].value + "\n";
+                //console.log(popupText);
+               mywindow = window.open("", "winbox", "width = 300px, height = 200px");
+               mywindow.document.write(popupText);
+
+                var button = document.createElement("input");
+                button.value = "Close";
+                button.type = "button";
+                button.addEventListener("click", closeWindow, false);
+                mywindow.document.body.appendChild(button);
+            });
+
+
+        function closeWindow() {
+            mywindow.close();
+            myForm.reset();
+        }
+
+
+    })();
+
+</script>
+</body>
+</html>
