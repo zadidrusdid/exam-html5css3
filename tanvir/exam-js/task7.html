@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>task 7</title>
+
+</head>
+
+<body>
+
+<form name="html_form" action="" method="GET" id="clearform">
+
+    <input type="button" value="checkAll" onclick="checkAll()">
+    <input type="button" value="unCheckAll" onclick="unCheckAll()">
+
+    <input type="checkbox" name="checkbox1">
+    <input type="checkbox" name="checkbox2">
+    <input type="checkbox" name="checkbox3">
+    <input type="checkbox" name="checkbox4">
+    <input type="checkbox" name="checkbox5">
+
+
+</form>
+
+<script>
+    function checkAll(){
+        var allInputs = document.getElementsByTagName("input");
+        for (var i = 0, max = allInputs.length; i < max; i++){
+            if (allInputs[i].type === 'checkbox')
+                allInputs[i].checked = true;
+        }
+
+    }
+
+    function unCheckAll(){
+        var allInputs = document.getElementsByTagName("input");
+        for (var i = 0, max = allInputs.length; i < max; i++){
+            if (allInputs[i].type === 'checkbox')
+                allInputs[i].checked = false;
+        }
+
+    }
+
+</script>
+</body>
+
+</html>
