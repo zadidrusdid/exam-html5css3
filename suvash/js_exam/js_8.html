@@ -4,7 +4,7 @@
 </head>
 <body>
 
-<button onclick="loadJsonData()">Load Countries List</button>
+<button onclick="loadCountryList()">Click here to load countries list</button>
 
 <div id="resultData"></div>
 
@@ -12,8 +12,7 @@
     var xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function () {
         if (xhr.readyState == 4) {
-            if (xhr.status == 200 || window.location.href.indexOf("http")==-1) {
-                var reponseData = eval("(" + xhr.responseText + ")") //retrieve result as an JavaScript object
+                var reponseData = eval("(" + xhr.responseText + ")") ;
 
                 var output = '<ul>';
 
@@ -24,14 +23,10 @@
                 }
 
                 document.getElementById("resultData").innerHTML = output;
-
-            } else {
-                alert("An error has occured!")
-            }
         }
     }
 
-    function loadJsonData() {
+    function loadCountryList() {
         xhr.open("GET", "countries.json", true);
         xhr.send(null);
     }
