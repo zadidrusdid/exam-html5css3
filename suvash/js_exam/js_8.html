@@ -1,0 +1,41 @@
+<html>
+<head>
+    <title>AJAX TEST</title>
+</head>
+<body>
+
+<button onclick="loadJsonData()">Load Countries List</button>
+
+<div id="resultData"></div>
+
+<script type="text/javascript">
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4) {
+            if (xhr.status == 200 || window.location.href.indexOf("http")==-1) {
+                var reponseData = eval("(" + xhr.responseText + ")") //retrieve result as an JavaScript object
+
+                var output = '<ul>';
+
+                for (var i = 0; i < reponseData.length; i++) {
+
+                    output += "<li>" + reponseData[i].name + "</li>";
+
+                }
+
+                document.getElementById("resultData").innerHTML = output;
+
+            } else {
+                alert("An error has occured!")
+            }
+        }
+    }
+
+    function loadJsonData() {
+        xhr.open("GET", "countries.json", true);
+        xhr.send(null);
+    }
+
+</script>
+</body>
+</html>

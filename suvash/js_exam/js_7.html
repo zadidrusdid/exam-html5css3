@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS SEVEN</title>
+    <script>
+        function checkAll() {
+            var checkboxes = new Array();
+            checkboxes = document.getElementsByTagName('input');
+
+            for (var i = 0; i < checkboxes.length; i++) {
+                if (checkboxes[i].type == 'checkbox') {
+                    checkboxes[i].setAttribute('checked', true);
+                }
+            }
+        }
+        function uncheckAll() {
+            var checkboxes = new Array();
+            checkboxes = document.getElementsByTagName('input');
+
+            for (var i = 0; i < checkboxes.length; i++) {
+                if (checkboxes[i].type == 'checkbox') {
+                    checkboxes[i].removeAttribute('checked');
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<form action="#">
+    <input type="checkbox" name="district" value="Dhaka">Dhaka<br>
+    <input type="checkbox" name="district" value="Gazipur">Gazipur<br>
+    <input type="checkbox" name="district" value="Chandpur">Chandpur<br>
+    <input type="checkbox" name="district" value="Tangail">Tangail<br>
+    <input type="checkbox" name="district" value="Manikgonj">Manikgonj<br>
+
+    <button onclick="checkAll()">checkAll</button>
+    <button onclick="uncheckAll()">uncheckAll</button>
+</form>
+</body>
+</html>

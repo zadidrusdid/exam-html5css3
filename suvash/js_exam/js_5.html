@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS FIVE</title>
+
+</head>
+<body>
+<form name="userForm" action="#">
+    <input type="text" name="first_name" placeholder="First Name"><br>
+    <input type="text" name="last_name" placeholder="Last Name"><br>
+    <input type="number" name="age" placeholder="Age"><br>
+
+    <input type="button" id="saveForm" name="submit" value="save">
+
+
+</form>
+<script>
+
+    //add event listener to save button
+    var saveElem = document.getElementById("saveForm");
+    saveElem.addEventListener("click", openPopup, false);
+    var myWindow;
+
+    function openPopup() {
+        var formContent = "";
+        var formElements = document.userForm.elements;
+        for (var i = 0; i < formElements.length - 1; i++) {
+            formContent += formElements[i].name + " : " + formElements[i].value + "<br />";
+        }
+        var divElem = document.createElement("div");
+        divElem.innerHTML = formContent;
+
+        myWindow = window.open("", "MsgWindow", "width=400,height=400");
+        myWindow.document.write(divElem.innerHTML);
+
+        var input = myWindow.document.createElement("input");
+        input.type = "button";
+        input.value = "Close";
+        input.id = "close";
+        myWindow.document.body.appendChild(input);
+        input.addEventListener("click", closePopup, false);
+
+    }
+
+    function closePopup(){
+        myWindow.close();
+        document.userForm.reset();
+    }
+</script>
+</body>
+</html>
