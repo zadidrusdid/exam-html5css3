@@ -1,0 +1,45 @@
+<html>
+<head>
+    <title> Evaluation on JavScript (Mini Project)</title>
+    <script>
+        var showElementName = function (){
+            var fieldset = document.getElementsByTagName("fieldset")[0];
+            fieldset.addEventListener("click", showType, false);
+            alert(fieldset.nodeName);
+
+            var div = document.getElementsByTagName("div")[0];
+            div.addEventListener("click", showType, false);
+            alert(div.nodeName);
+
+            var span = document.getElementsByTagName("span")[0];
+            span.addEventListener("click", showType, false);
+            alert(span.nodeName);
+
+
+            var button = document.getElementsByTagName("button")[0];
+            button.addEventListener("click", showType, true);
+            alert(button.nodeName);
+        };
+
+        function showType(){
+            alert(this.nodeName);
+        }
+    </script>
+</head>
+<body>
+
+<fieldset>
+    <div>
+        <span>
+            <button>
+                Click Me
+            </button>
+        </span>
+    </div>
+</fieldset>
+
+<script>
+    showElementName();
+</script>
+</body>
+</html>

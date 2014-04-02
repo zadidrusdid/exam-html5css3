@@ -1,0 +1,58 @@
+<html>
+<head>
+    <title> Evaluation on JavScript (Mini Project)</title>
+    <script>
+
+        var myWindow = "";
+        function formSubmit(){
+
+            console.log("Open popup");
+
+            var myPopup = document.createElement("div");
+            myPopup.style = "";
+
+            var strContent = "";
+
+            var name  = document.getElementById('name').value;
+            var age  = document.getElementById('age').value;
+            var email  = document.getElementById('email').value;
+
+            strContent = "Name: " + name + "<br>"
+                       + " Age: " + age  + "<br>"
+                       + " Email: " + email  + "<br>";
+
+            myPopup.innerHTML = "<br />" + strContent;
+
+            myWindow = window.open("","MsgWindow","width=300,height=200");
+            myWindow.document.write(myPopup.innerHTML);
+
+            var input = myWindow.document.createElement("input");
+            input.type = "button";
+            input.value = "Close";
+            input.id = "close";
+            myWindow.document.body.appendChild(input);
+
+            input.addEventListener("click", closePopup, false);
+
+        }
+
+        function closePopup(){
+            myWindow.close();
+            document.getElementById('myForm').reset();
+        }
+    </script>
+</head>
+<body>
+
+<form id="myForm">
+    Name <input type="text" name="Name" id="name">
+    Age  <input type="text" name="Age" id="age">
+    Email <input type="text" name="Email" id="email">
+    <input type="button" value="save" id="save" onclick="formSubmit()">
+</form>
+
+
+</div>
+</body>
+
+</html>
