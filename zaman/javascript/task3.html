@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<script>
+    (function(){
+
+       var showPrompt = true
+        while(showPrompt){
+            var name = prompt("Enter user name:");
+            if (name){
+                if(confirm(name)){
+                    alert(name);
+                    document.write(name);
+                    console.log(name);
+                    showPrompt = false;
+                } else {
+                    name = prompt("Enter user name:");
+                }
+            } else {
+                showPrompt = false;
+            }
+        }
+
+    })();
+</script>
+</body>
+</html>
