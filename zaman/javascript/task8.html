@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 8</title>
+</head>
+<body>
+<script>
+
+
+    var xhr = new XMLHttpRequest();
+
+    xhr.open('GET', 'countries.json', true);
+    xhr.setRequestHeader('User-Agent','ajax');
+
+    xhr.onreadystatechange = function(){
+
+        if (xhr.readyState === 4){
+           var countries = eval(xhr.responseText);
+            var select = document.createElement('select');
+            select.id = "selectList";
+            select.text = "Select Country";
+            document.body.appendChild(select);
+           for(var i = 0; i < countries.length; i++){
+               var option = document.createElement("option");
+               option.value = countries[i].code;
+               option.text = countries[i].name;
+               selectList.appendChild(option);
+           }
+        }
+    }
+
+    xhr.send(null);
+</script>
+</body>
+</html>
