@@ -195,8 +195,9 @@
 <div class="extra4" role="presentation"></div><div class="extra5" role="presentation"></div><div class="extra6" role="presentation"></div>
 
 <hr/>
-List of links 
+List of links
 <script>
+
     var links = document.getElementsByTagName('a');
     var ul = document.createElement('ul');
 
@@ -205,10 +206,9 @@ List of links
         var li=document.createElement('li');
         li.innerHTML= links[i].attributes.href.value ;
         ul.appendChild(li);
-
-
     }
     document.body.appendChild(ul);
+
 </script>
 </body>
 </html>

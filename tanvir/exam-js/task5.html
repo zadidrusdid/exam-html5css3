@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>task 5</title>
+
+</head>
+
+<form name="html_form" action="" method="GET" id="clearform">
+
+    <input type="text" placeholder="name" name="name">
+    <input type="number" placeholder="id" name="id">
+    <input type="email" placeholder="email" name="email">
+    <input type="button" value="Submit" onclick="showInfo(this.form)">
+
+</form>
+
+<body>
+
+<script>
+    function showInfo(form) {
+        var popWindow = window.open("","MsgWindow","width=500,height=400");
+
+        popWindow.document.write("<p>Name: "+ form.elements["name"].value+"</p>");
+        popWindow.document.write("<p>Id: "+ form.elements["id"].value+"</p>");
+        popWindow.document.write("<p>email: "+ form.elements["email"].value+"</p>");
+
+        popWindow.document.write("<input type='button' value='Close' onclick='window.close()'>");
+
+    }
+
+
+
+</script>
+</body>
+</html>
