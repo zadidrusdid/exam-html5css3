@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<ul>
+    <li><input type="checkbox" name="checkbox[]">Bangladesh</li>
+    <li><input type="checkbox" name="checkbox[]">India</li>
+    <li><input type="checkbox" name="checkbox[]">pakistan</li>
+    <li><input type="checkbox" name="checkbox[]">Nepal</li>
+    <li><input type="checkbox" name="checkbox[]">Srilanka</li>
+</ul>
+<button onclick="checkAll();">Check All</button>
+<button onclick="unCheckAll();">Uncheck All</button>
+
+<script>
+    function checkAll()
+    {
+        var checkboxes = new Array();
+        checkboxes = document.getElementsByTagName('input');
+
+        for (var i=0; i < checkboxes.length; i++)  {
+                checkboxes[i].checked = true;
+        }
+    }
+
+    function unCheckAll()
+    {
+        var checkboxes = new Array();
+        checkboxes = document.getElementsByTagName('input');
+
+        for (var i=0; i < checkboxes.length; i++)  {
+            checkboxes[i].checked = false;
+        }
+    }
+</script>
+</body>
+</html>
