@@ -1,0 +1,121 @@
+/*!
+ *Custom style for theme
+*/
+.navbar {
+    min-height: 70px;
+}
+
+/****Banner****/
+.header-banner-bg {
+    background: url("../images/banner_bg.png") repeat scroll center top rgba(0, 0, 0, 0);
+    padding-top: 110px;
+}
+
+.header-banner-bg h1 {
+    color: #F1F3F5;
+    font-family: Bree Serif, sans-serif;
+    font-size: 80px;
+    font-weight: normal;
+    line-height: 90px;
+    padding: 157px 0 35px;
+    text-align: center;
+    text-shadow: 0 1px 3px #7F7D7E;
+}
+
+.header-banner-bg p {
+    color: #45540D;
+    font-size: 24px;
+    line-height: 30px;
+    text-align: center;
+}
+
+/**********Carousel*************/
+.carousel-control .glyphicon,
+.carousel-control .icon-prev,
+.carousel-control .icon-next {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 5;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-top: -10px;
+    margin-left: -10px;
+    font-family: serif;
+}
+
+.carousel-control .icon-prev:before {
+    content: '\2039';
+}
+
+.carousel-control .icon-next:before {
+    content: '\203a';
+}
+
+/********Service***********/
+.service-header-services {
+    background-color: #85a736;
+}
+
+.service-header-model {
+    background-color: #00a7c1;
+}
+
+.service-header-technology {
+    background-color: #bf3e82;
+}
+
+.service-img {
+    display: block;
+    text-align: center;
+    height: 150px;
+}
+
+.h3_07 {
+    color: #F0F3F5;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0 0 10px;
+    padding: 0;
+    text-align: center;
+    text-shadow: 0 1px 3px rgba(36, 37, 38, 0.25);
+    text-transform: uppercase;
+}
+
+.p-01 {
+    color: #F0F3F5;
+    font-size: 27px;
+    padding: 0 0 50px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/******Careers******/
+#myTab .active {
+    background-color: #3e444c;
+}
+
+/********Company******/
+.company-banner {
+    background: url("../images/banner02.png") repeat scroll center top rgba(0, 0, 0, 0);
+    min-height: 420px;
+}
+
+/**footer***/
+.footer {
+    background: url("../images/ftr_bg.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
+    color: #FFFFFF;
+    font-size: 14px;
+    padding: 40px 0 35px;
+    text-align: center;
+}
+
+.footer-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#cm-case,#cm-service,#cm-company,#cm-career,#cm-contact {
+    min-height: 450px;
+}
