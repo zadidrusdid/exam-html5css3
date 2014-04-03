@@ -1,0 +1,92 @@
+#services h1 {
+    font-size: 42px;
+    font-weight: 300;
+    line-height: 40px;
+    color: #f1f3f5;
+    padding: 0 0 20px 0;
+    text-align: left;
+}
+
+#services p {
+    font-size: 27px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #f0f3f5;
+    padding: 0 0 50px 0;
+}
+
+.service-heading {
+    min-height: 241px;
+    padding: 37px 0 0 0
+}
+
+.service-heading span {
+    display: block;
+    height: 150px;
+}
+
+.service-heading h2 {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: #f0f3f5;
+    text-transform: uppercase;
+    text-shadow: 0 1px 3px rgba(36,37,38,0.25);
+    padding: 0 0 10px 0;
+}
+
+.service-list {
+    list-style: none;
+    text-align: center;
+    background: #f0f3f5;
+    min-height: 200px;
+    margin: 0 0 50px 0;
+    padding: 0;
+}
+
+.service-list li {
+    font-size: 17px;
+    color: #242526;
+    border-bottom: 1px solid #c1c8cc;
+    padding: 10px 0 10px 0;
+    margin: 0;
+}
+
+.bg1 {
+    background: #85a736;
+}
+
+.bg2 {
+    background: #00a7c1;
+}
+
+.bg3 {
+    background: #bf3e82;
+}
+
+carousel-control .glyphicon,
+.carousel-control .icon-prev,
+.carousel-control .icon-next {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 5;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-top: -10px;
+    margin-left: -10px;
+    font-family: serif;
+}
+
+.carousel-control .icon-prev:before {
+    content: '\2039';
+}
+
+.carousel-control .icon-next:before {
+    content: '\203a';
+}
+.company-img {
+    background: url(../img/cm/banner02.png) repeat top center;
+    min-height: 420px;
+}
