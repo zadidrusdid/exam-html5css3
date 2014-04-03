@@ -1,0 +1,57 @@
+#main-container {
+    background: none repeat scroll 0 0 #393D40;
+}
+
+#intro .jumbotron {
+    background: url("images/banner_bg.png") no-repeat;
+    text-align: center;
+
+}
+
+#intro .jumbotron h1 {
+    font-weight: normal;
+    color: #f1f3f5;
+    text-shadow: 0 1px 3px #7f7d7e;
+}
+
+#services h1 {
+    color: #f1f3f5;
+}
+
+#about h1,#about p{
+    color: #f1f3f5;
+}
+
+
+
+#services h2 {
+    font-weight: normal;
+    color: #f1f3f5;
+    text-align: center;
+    margin-bottom: 4%;
+    margin-top: 4%;
+}
+
+.service-columns img {
+    padding-top: 15px;
+}
+
+.service-columns h4 {
+    text-align: center;
+    font-weight: bold;
+    color: #f1f3f5;
+
+}
+
+.srv-services {
+    background-color: #85a736;
+}
+
+.srv-delivery {
+    background-color: #00a7c1;
+}
+
+.srv-technology {
+    background-color: #bf3e82;
+}
+
