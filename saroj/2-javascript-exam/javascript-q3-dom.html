@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exam: Javascript Q:3 - DOM</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+    </head>
+    <body>
+        <script type="text/javascript">
+            (function() {
+                var name = window.prompt("Please enter your name");
+                while(window.confirm("Is your name: " + name + " ?") === false) {
+                    name = window.prompt("Please enter your name");
+                }
+                window.alert(name); 
+                document.write(name);
+                console.log(name);
+            })();
+        </script>
+    </body>    
+</html>

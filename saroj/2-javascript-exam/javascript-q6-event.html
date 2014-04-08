@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exam: Javascript Q:6 - Event</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+    </head>
+    <body>
+        <fieldset id="fieldset1" name="fieldset1">
+            <div id="div1" name="div1">
+                <span id="span1" name="span1"><button type="button" name="btnClickMe" id="btnClickMe">Click Me</button></span>
+            </div>            
+        </fieldset>
+        <script type="text/javascript">
+            var button = document.getElementById('btnClickMe');
+            var fieldset = document.getElementById('fieldset1');
+            var div = document.getElementById('div1');
+            var span = document.getElementById('span1');
+            button.onclick = function(event){
+                event.stopPropagation();
+                fieldset.click();
+                div.click();
+                span.click();
+                showTypeAndName(this);
+            };
+            fieldset.onclick = function(event){
+                showTypeAndName(this);
+                event.stopPropagation();
+            };
+            div.onclick = function(event){
+                showTypeAndName(this);
+                event.stopPropagation();
+            };
+            span.onclick = function(event){
+                showTypeAndName(this);
+                event.stopPropagation();
+            };
+            function showTypeAndName(element) {
+                alert(element.tagName + '/' + element.getAttribute('name'));
+            }
+        </script>
+    </body>    
+</html>
