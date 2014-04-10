@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exam: Javascript Q:7 - Event</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+    </head>
+    <body>
+        <div>
+            <form action="">
+                <input type="checkbox" name="Checkbox_1" value="Checkbox_1">Checkbox_1<br>
+                <input type="checkbox" name="Checkbox_2" value="Checkbox_2">Checkbox_2<br>
+                <input type="checkbox" name="Checkbox_3" value="Checkbox_3">Checkbox_3<br>
+                <input type="checkbox" name="Checkbox_4" value="Checkbox_4">Checkbox_4<br>
+                <input type="checkbox" name="Checkbox_5" value="Checkbox_5">Checkbox_5<br>
+                <button type="button" id="btnCheckAll">Check All</button>
+                <button type="button" id="btnUncheckAll">Uncheck All</button>
+            </form>
+        </div>
+        <script type="text/javascript">
+            var btnCheckAll = document.getElementById('btnCheckAll');            
+            btnCheckAll.onclick = function(event) {
+                var items = document.querySelectorAll("input[type=checkbox]");
+                for(var i=0; i<items.length;i++) {
+                    items[i].checked=true;
+                }
+            };
+            
+            var btnUncheckAll = document.getElementById('btnUncheckAll');
+            btnUncheckAll.onclick = function(event) {
+                var items = document.querySelectorAll("input[type=checkbox]");
+                for(var i=0; i<items.length;i++) {
+                    items[i].checked=false;
+                }
+            };
+        </script>
+    </body>    
+</html>

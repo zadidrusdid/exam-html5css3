@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exam: Javascript Q:8 - Ajax load country list</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+    </head>
+    <body>
+        <ul id="countryList"></ul>
+        <script type="text/javascript">
+
+            function ajaxLoadCountryList() {
+                var sourceUrl = "countries.json";
+                var xmlhttp;
+                
+                if (window.XMLHttpRequest) {
+                    // code for IE7+, Firefox, Chrome, Opera, Safari
+                    xmlhttp = new XMLHttpRequest();
+                } else {
+                    // code for IE6, IE5
+                    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+                }
+
+                xmlhttp.onreadystatechange = function() {
+                    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                        var jsonData = eval("(" + xmlhttp.responseText + ")");
+                        var listElement = document.getElementById('countryList');
+                        for (var i = 0; i < jsonData.length; i++) {
+                            var opt = document.createElement('li');
+                            console.log(jsonData[i]);
+                            opt.innerHTML = jsonData[i].name + " - " + jsonData[i].code;
+                            listElement.appendChild(opt);
+                        }
+                    }
+                }
+
+                xmlhttp.open("GET", sourceUrl, true);
+                xmlhttp.send();
+            }
+
+            ajaxLoadCountryList();
+        </script>
+    </body>    
+</html>

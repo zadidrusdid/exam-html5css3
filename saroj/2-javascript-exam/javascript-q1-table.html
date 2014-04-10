@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exam: Javascript Q:1 - DOM</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+    </head>
+    <body>
+        <table id="customTable" border="1"></table>
+        <script type="text/javascript">
+            function drawTable(totalRow, totalCol) {
+                var tableElement = document.getElementById('customTable');
+                for(var row = 0; row < totalRow; row ++ ) {
+                   var rowElement = document.createElement("tr");
+                   for(var col = 0; col < totalCol; col ++ ) {
+                       var colElement = document.createElement("td");
+                       colElement.innerHTML = "Row: " + row + " Col: " + col;
+                       rowElement.appendChild(colElement);
+                   }
+                   tableElement.appendChild(rowElement);
+                }                
+            }
+            drawTable(4,3);
+        </script>
+    </body>    
+</html>

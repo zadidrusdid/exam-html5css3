@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exam: Javascript Q:5 - The popup window</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+    </head>
+    <body>
+        <dl>
+            <dt>Name:</dt>
+            <dd id="name"></dd>
+            <dt>Address:</dt>
+            <dd id="address"></dd>
+            <dt>Email:</dt>
+            <dd id="email"></dd>
+        </dl>    
+        <script type="text/javascript">
+            document.getElementById('name').innerHTML = window.opener.document.getElementById('name').value;
+            document.getElementById('address').innerHTML = window.opener.document.getElementById('address').value;
+            document.getElementById('email').innerHTML = window.opener.document.getElementById('email').value;
+        </script>
+    </body>    
+</html>
