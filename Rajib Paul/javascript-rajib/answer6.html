@@ -1,0 +1,30 @@
+<html>
+<head>
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+<fieldset><div><span><button>Click Me</button></span></div></fieldset>
+<script>
+    (function(){
+
+        var btn = document.getElementsByTagName("button")[0];
+        var fieldset = document.getElementsByTagName("fieldset")[0];
+        var div = document.getElementsByTagName("div")[0];
+        var span = document.getElementsByTagName("span")[0];
+
+        fieldset.addEventListener("click" , showAlert , true);
+        div.addEventListener("click" , showAlert , true);
+        span.addEventListener("click" , showAlert , true);
+        btn.addEventListener("click" , showAlert , true);
+
+        function showAlert(){
+                alert(this.nodeName);
+        }
+
+    })();
+
+</script>
+</body>
+</html>

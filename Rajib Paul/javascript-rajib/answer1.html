@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <style type="text/css">
+            .myTable {
+                border:1px solid #000000;
+            }
+            .myTable td{
+                background:#cccccc;
+                border:1px solid #000000;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="myDiv"></div>
+        <script>
+
+           window.onload = drawTable(2,5);
+           function drawTable(numOfrow , numOfcolumn){
+                var targetDiv = document.getElementById("myDiv");
+                var myTable = document.createElement("table");
+                var tableBody = document.createElement("tbody");
+                myTable.className = "myTable";
+                for (var i=0 ;i<numOfrow;i++){
+                    row = document.createElement("tr");
+                    for (var j=0;j<numOfcolumn;j++){
+                        cell = document.createElement("td");
+                        cell.appendChild(document.createTextNode( i + ' , ' +j));
+                        row.appendChild(cell);
+                    }
+                    tableBody.appendChild(row);
+                }
+                myTable.appendChild(tableBody);
+                targetDiv.appendChild(myTable);
+           }
+        </script>
+    </body>
+</html>
