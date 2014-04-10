@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS THREE</title>
+
+</head>
+<body>
+<div id="name"></div>
+<script>
+    (function () {
+        //console.log('Hello World!');
+       // var personName;
+       /* var person = prompt("Please enter your name", "");
+        if (person) {
+            x = "Hello " + person;
+            // console.log(x);
+            // document.getElementById("name").innerHTML=x;
+
+            var r = confirm(personName);
+            if (r == true) {
+                alert(personName);
+            }
+            else {
+                person = prompt("Please enter your name", "");
+                if (person != null) {
+                    alert(person);
+                }
+            }
+           // document.getElementById("name").innerHTML = x;
+        }*/
+        var promptBox = true;
+        while (promptBox) {
+
+            var personName = prompt("Please enter your name", "");
+            if (personName) {
+                var confirmation = confirm("confirmation: Hello " + personName);
+                if (confirmation == true) {
+                    alert("Hello" + personName);
+                    document.write(personName);
+                    console.log(personName);
+                    promptBox = false;
+                }
+            }
+        }
+    })();
+
+</script>
+</body>
+</html>

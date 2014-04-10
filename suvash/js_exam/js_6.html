@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <script>
+        function elemShow() {
+            var fieldsetElem = document.getElementsByTagName("fieldset")[0];
+            fieldsetElem.addEventListener("click", elemTypeShow, false);
+
+
+            var divElem = document.getElementsByTagName("div")[0];
+            divElem.addEventListener("click", elemTypeShow, false);
+
+
+            var spanElem = document.getElementsByTagName("span")[0];
+            spanElem.addEventListener("click", elemTypeShow, false);
+
+
+            var buttonElem = document.getElementsByTagName("button")[0];
+            buttonElem.addEventListener("click", elemTypeShow, true);
+
+        }
+        ;
+
+        function elemTypeShow() {
+            alert(this.nodeName);
+        }
+
+        window.onload = elemShow;
+    </script>
+</head>
+
+<body>
+<fieldset>
+    <div>
+                <span>
+                    <button>Click me</button>
+                </span>
+    </div>
+</fieldset>
+</body>
+</html>
